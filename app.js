@@ -19,7 +19,7 @@ var indexRoutes                 = require("./routes/index")
 // seedDB()
 
 // mongoose.connect('mongodb://localhost:27017/yelp_camp',{ useNewUrlParser: true });
-mongoose.connect("mongodb://smnaqvi:arsenal4ever@ds125031.mlab.com:25031/yelpcampsnaqvi");
+mongoose.connect(process.env.DATABASEURL);
 app.use (bodyParser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname +"/public"))
